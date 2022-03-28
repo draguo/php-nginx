@@ -6,6 +6,7 @@ ENV TZ=Asia/Shanghai
 
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 COPY conf/default.conf /etc/nginx/conf.d/default.conf
+COPY conf/zzz-docker.conf /usr/local/etc/php-fpm.d/zzz-docker.conf
 
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
